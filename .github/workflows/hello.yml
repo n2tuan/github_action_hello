@@ -1,0 +1,18 @@
+name: hello-github-action
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  - hello:
+    runs-on: ubuntu-lasted
+
+    steps:
+      - name: Hello
+        run: echo "Hello Github Action"
+      - name: Date
+        run: date
+      - name: List files
+        run: ls -ltr
