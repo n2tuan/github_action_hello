@@ -26,6 +26,7 @@ jobs:
               mkdir -p ~/.snowflake
               cp .snowflake/connections.toml ~/.snowflake/connections.toml
               chmod 600 ~/.snowflake/connections.toml
+              cat ~/.snowflake/connections.toml
       
       - name: execute SQL
         run: |
