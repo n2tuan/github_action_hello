@@ -24,9 +24,8 @@ jobs:
       - name: Copy config
         run: |
               mkdir -p ~/.snowflake
-              cp .snowflake/connections.toml ~/.snowflake/connections.toml
-              chmod 600 ~/.snowflake/connections.toml
-              cat ~/.snowflake/connections.toml
+              cp .snowflake/config.toml ~/.snowflake/config.toml
+              chmod 600 ~/.snowflake/config.toml
       
       - name: execute SQL
         run: |
