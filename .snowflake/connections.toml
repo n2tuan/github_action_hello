@@ -1,0 +1,11 @@
+default_connection_name = 'snowflake'
+
+[connections.snowflake]
+account = "LBZHXYY-ESB94291"
+user = "DWW"
+password = "gycqer-pujviv-vuvJy2"
+role = "SYSADMIN"
+warehouse = "COMPUTE_WH"
+database = "GITHUB_ACTION_DB"
+schema = "PUBLIC"
+client_session_keep_active = true
