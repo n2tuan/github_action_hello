@@ -28,10 +28,15 @@ jobs:
               mkdir -p ~/.snowflake
               envsubst < .snowflake/config.toml > ~/.snowflake/config.toml
               chmod 600 ~/.snowflake/config.toml
-              cat ~/.snowflake/config.toml
       
-      - name: execute SQL
+      - name: insert SQL
         run: |
               snow sql \
               -c snowflake \
               -f sql/01_Insert.sql
+      
+      - name: query result
+        run: |
+              snow sql \
+              -c snowflake \
+              -f sql/02_Select.sql
