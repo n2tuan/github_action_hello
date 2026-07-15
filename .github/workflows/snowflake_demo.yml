@@ -31,4 +31,4 @@ jobs:
         run: |
               snow sql \
               -c snowflake \
-              -f sql/00_Insert.sql
+              -f sql/01_Insert.sql
