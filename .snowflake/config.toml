@@ -3,7 +3,7 @@ default_connection_name = 'snowflake'
 [connections.snowflake]
 account = "LBZHXYY-ESB94291"
 user = "DWW"
-password = "gycqer-pujviv-vuvJy2"
+password = "${SNOWFLAKE_PASSWORD}"
 role = "SYSADMIN"
 warehouse = "COMPUTE_WH"
 database = "GITHUB_ACTION_DB"

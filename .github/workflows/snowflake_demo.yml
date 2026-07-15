@@ -22,10 +22,13 @@ jobs:
         run: pip install snowflake-cli
 
       - name: Copy config
+        env:
+          SNOWFLAKE_PASSWORD: ${{secrets.SNOWFLAKE_PASSWORD}}
         run: |
               mkdir -p ~/.snowflake
-              cp .snowflake/config.toml ~/.snowflake/config.toml
+              envsubst < .snowflake/config.toml > ~/.snowflake/config.toml
               chmod 600 ~/.snowflake/config.toml
+              cat ~/.snowflake/config.toml
       
       - name: execute SQL
         run: |
