@@ -3,7 +3,7 @@ name: hello-github-action
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   hello:
